@@ -1,0 +1,29 @@
+body {
+	font-family: verdana;
+	background-color: powderblue;
+}
+h1 {
+	color: blue;
+	font-family: courier;
+}
+p {
+	color: tomato;
+	font-size: 160%;
+}
+a:link {
+	color:green;
+}
+
+a:link {
+	color:blue;
+}
+
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+a:active {
+	color: yellow;
+	text-decoration: underline;
+}
