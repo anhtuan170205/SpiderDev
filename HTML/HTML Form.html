@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Form</h2>
+<form>
+  <fieldset>
+    <legend>Personal information:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Tuan" size="50" readonly><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Tran" disabled><br>
+    <label for="birthday">Birthday:</label><br>
+    <input type="date" id="birthday" name="birthday" value=""><br>
+    <label for="birthdaytime">Birthday time:</label><br>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime" autofocus><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <label for="phone">Phone:</label><br>
+    <input type="tel" id="phone" name="phone" value="" maxlength="10" pattern="[]"><br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </fieldset>
+</form>
+
+<p>Choose your favorite programming language:</p>
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label><br>
+</form>
+
+<p>Choose your favorite fruit:</p>
+<form>
+  <input type="checkbox" id="orange" name="fruit" value="Orange">
+  <label for="orange">Orange</label><br>
+  <input type="checkbox" id="banana" name="fruit" value="Banana">
+  <label for="banana">Banana</label><br>
+  <input type="checkbox" id="apple" name="fruit" value="Apple">
+  <label for="apple">Apple</label><br>
+</form>
+
+<p> Select your favorite color:</p>
+<form>
+  <select id="color" name="color">
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Type your story:</p>
+<form>
+  <textarea id="story" rows="10" cols="30" width="200" height="300" placeholder="Type somthing..." required></textarea>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<button type="button" onclick="alert('Hello world!')">Click me!</button>
+
+<p>Select your browser:</p>
+<form>
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Chrome"></option>
+    <option value="Firefox"></option>
+    <option value="Internet Explorer"></option>
+    <option value="Arc"></option>
+  </datalist>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Calulator:</p>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <button type="button" onclick="alertValue()">Alert a and b</button>
+</form>
+
+<script>
+  function alertValue()
+  {
+    var a = document.getElementById("a").value;
+    var b = document.getElementById("b").value;
+    alert(`Value of a: ${a}\nValue of b: ${b}`);
+  }
+</script>
+
+<p>Upload the file here:</p>
+<form>
+  <input type="file" id="myFile" name="filename" multiple>
+  <input type="submit">
+</form>
+
+
+
+</body>
+</html>
